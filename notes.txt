@@ -1,0 +1,39 @@
+High-level objective combat system
+No hitpoints. Predefined overall injury levels:
+0. Undamaged. (May be lightly bruised or superficially scratched, but no aftercare required.)
+1. Bruised/cut. (Might need ice and bandages but you'll be okay.)
+2. Roughed up. (Bones may be broken, gashes may require staunching. Urgent care and a convalescence period required to avoid permanent damage, but return to normalcy is expected in about two months if treatment is given.)
+3. Maimed. (Permanent damage requiring surgery and months/years of physical therapy to restore normalcy.)
+4. Dead. (Perhaps not instantly, but as soon as the combat adrenaline wears off.)
+During combat, the player can control what injury level the character wants the opponent to reach. The player does not control specific blows/blocks; that's up to the character.
+The character has a certain number of combat skill points. Those points get assigned to the desired injury level. The character's weapon also starts with a certain injury profile, represented as different numbers of points for different target injury levels. The injury dealt is determined by picking randomly from the distribution allotted by this allocation. Therefore, the more combat training you have, the more control you have for dealing the specific kind of injury you want.
+Every combat skill point, when allotted to a desired injury level, is subject to a Discipline check. Missing a Discipline check results in that skill point being allotted either one level above or one level below the target (50/50). This recalibration must be performed before every blow.
+Strength translates into free combat points for melee weapons, at some ratio (likely 33%). Dexterity likewise for edged weapons and ranged weapons (so edged melee get both strength and dex bonuses). Martial training contributes combat points directly. Dexterity contributes to Armor.
+The opponent gets to "save" against this damage. His save odds are his combat score vs. player character's combat score. P(save) = CStarget / (CSattacker + CStarget + Armor). A successful save downgrades the received injury by one level. This can be applied recursively until the level reaches 0. Therefore, the more combat training you have, the harder you are to hit, and the more you can mitigate damage.
+Each injury has a chance of reducing combat effectiveness. This chance is given by the level of the received injury divided by the target's current effective combat score. P(reduction) = InjuryLevel / (CStarget + Armor + Resilience), where Resilience = target's ability to keep fighting despite injury. If it does cause a reduction, it reduces the target's combat score by the target's current injury level (incorporating the recent blow). Reaching an effective combat score of 0 renders the target unable to fight in any way. It is thus possible to knock a target out in a single punch with little actual damage, and it is likewise possible for a target to keep fighting after they've sustained mortal damage. Combat scores will return in a timeframe determined by the target's final injury level.
+Combat timing occurs in rounds. Each opponent gets a number of moves in each round that is equal to their combat score. Moves happeb one at a time. Each move is drawn randomly from the total moves available to all opponents.
+Fleeing: Any fighter may attempt to flee combat at any time. If a fighter is less injured than all opponents, then fleeing is automatically successful. Every opponent that is of equal health to the fleeing character has a 50/50 chance of preventing flight. If an opponent can prevent flight, they can choose to let the fighter flee anyway, e.g. if they've already dealt the desired amount of damage. If they choose *not* to let the fighter escape, they get a free attack that the fighter cannot save against. If they do flee, then the status quo pre-combat prevails (except for injuries, of course).
+Surrender: A fighter can offer to surrender at any time. While offering surrender, the fighter cannot save against any blows from his attackers. The attackers don't have to accept his surrender. Until the surrender is accepted, the fighter can choose to withdraw his offer of surrender. If the surrender is accepted, then combat ends with the attacker's objectives being met. If the fighter is armed, surrender also entails dropping their weapons.
+Stand down: A fighter can choose to Stand Down by selecting 0 (undamaged) as their desired enemy injury level. They will inflict no further blows on the enemy but can still save against blows inflicted upon themselves. These saves will occur with 50% extra combat score points. When all combatants are Standing Down, combat ends. The status quo pre-combat prevails (except for injuries, of course).
+
+AI: The AI player needs to be defined with utility costs for each injury level, representing to what extent it's worth sustaining that injury in order to achieve the goals of the fight. 
+
+
+
+max acceptable probabilities of injury at each level. This is determined relative to the story, and establishes the point at which the AI is no longer willing to take any more damage to achieve its purpose for fighting. This is called the "loss equivalence distribution", and it represents how injurious it would be to lose the fight.  This changes as the fight goes on; specifically, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Get Outlook for Android
+
