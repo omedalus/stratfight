@@ -60,5 +60,8 @@ typings/
 # next.js build output
 .next
 
-# Jupyter Notebook scratch files.
-*/.ipynb_checkpoints/*
+# Jupyter Notebook scratch files and Python build files.
+__pycache__
+*/*.pyc
+*/.ipynb_checkpoints
+src/concept/stratfight/__pycache__/__init__.cpython-36.pyc

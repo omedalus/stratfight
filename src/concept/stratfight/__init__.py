@@ -26,7 +26,9 @@ class ActionOption(Enum):
 class InjurySeverityAllocation:
   def __init__(self, points = None):
     self.points = {sev:0 for sev in InjurySeverity}
-    if type(points) is dict:
+    if type(points) is InjurySeverityAllocation:
+      self.points = {sev:points.points[sev] for sev in InjurySeverity if sev in points.points}      
+    elif type(points) is dict:
       self.points = {sev:points[sev] for sev in InjurySeverity if sev in points}
     elif type(points) is list:
       for sev, sval in zip(InjurySeverity, points):
@@ -41,11 +43,23 @@ class InjurySeverityAllocation:
     return retval
 
 
+
+
 class Weapon:
-  def __init__(self):
-    self.name = ''
-    self.category = set()
-    self.allocation = InjurySeverityAllocation()
+  def __init__(self, name=None, categories=None, allocation=None):
+    self.name = name or ''
+    self.categories = categories or set()
+    self.allocation = InjurySeverityAllocation(allocation)
+
+  class SAMPLES:
+    fists = None
+    sword = None
+    bow = None
+
+Weapon.SAMPLES.fists = Weapon('Fists', {WeaponCategory.MELEE, WeaponCategory.BLUDGEONING}, [0, 3, 2, 1, 0])
+Weapon.SAMPLES.sword = Weapon('Sword', {WeaponCategory.MELEE, WeaponCategory.EDGED, WeaponCategory.PIERCING}, [0, 1, 2, 3, 2])
+Weapon.SAMPLES.bow = Weapon('Bow', {WeaponCategory.RANGED, WeaponCategory.PIERCING}, [0, 1, 2, 3, 2])
+
 
 
 
