@@ -29,17 +29,5 @@ Now, tactical considerations in and of themselves aren't a bad thing. Both in li
 The problem is that these are extremely rare *exceptions* in the context of turn-based game combat. A D&D-style or JRPG-style combat system is one in which such story-defining tactical maneuvers *can* happen, but the rarity with which they *do* happen makes the system itself detract significantly from the tale being told. For games that are ostensibly dedicated to storytelling, it doesn't make sense for huge durations of time -- in some cases more than half the total hours of playtime -- to be spent in a number-crunching combat system in the often futile hope that *maybe* some battlefield detail *might* have some non-vanishing significance.
 
 ### Hit-point systems are simultaneously overly simplistic and overly specific
-
-
-
-
-
-
-
-
-
-
-, the use of turn-based combat to permit 
-
-
+Much has been written about the shortcomings of hit-point systems, but improving upon them has always proven tricky. 
 
