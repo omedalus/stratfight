@@ -61,7 +61,6 @@ typings/
 .next
 
 # Jupyter Notebook scratch files and Python build files.
-__pycache__
-*/*.pyc
-*/.ipynb_checkpoints
-src/concept/stratfight/__pycache__/__init__.cpython-36.pyc
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
