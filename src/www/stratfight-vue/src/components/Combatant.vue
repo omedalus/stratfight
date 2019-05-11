@@ -1,5 +1,7 @@
 <template>
-  
+  <div>
+    IM A FITUR
+  </div>
 </template>
 
 <script lang="ts">
@@ -8,7 +10,7 @@ import Component from 'vue-class-component';
 
 // The @Component decorator indicates the class is a Vue component
 @Component
-export default class CombatantComponent extends Vue {
+export default class CombatantVue extends Vue {
   // Initial data can be declared as instance properties
   message: string = 'Hello!'
 
