@@ -1,0 +1,10 @@
+{
+  "arya_stark": {
+    "name": "Arya Stark",
+    "stats": {
+      "strength": 1,
+      "dexterity": 6,
+      "training": 6
+    }
+  }
+}
