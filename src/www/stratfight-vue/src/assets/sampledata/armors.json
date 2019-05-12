@@ -1,0 +1,22 @@
+{
+  "none": {
+    "name": "None",
+    "armor_value": 0,
+    "dexterity_penalty": 0
+  },
+  "leather": {
+    "name": "Leather",
+    "armor_value": 3,
+    "dexterity_penalty": 1
+  },
+  "chainmail": {
+    "name": "Chainmail",
+    "armor_value": 4,
+    "dexterity_penalty": 2
+  },
+  "plate": {
+    "name": "Plate",
+    "armor_value": 8,
+    "dexterity_penalty": 4
+  }  
+}

@@ -1,0 +1,50 @@
+{
+  "broadsword": {
+    "name": "Broadsword",
+    "damage": 8,
+    "lethality": 4,
+    "attributes": [
+      "melee"
+    ]
+  },
+  "rapier": {
+    "name": "Rapier",
+    "damage": 6,
+    "lethality": 3,
+    "attributes": [
+      "melee"
+    ]
+  },
+  "battleaxe": {
+    "name": "Battleaxe",
+    "damage": 12,
+    "lethality": 6,
+    "attributes": [
+      "melee"
+    ]
+  },
+  "longbow": {
+    "name": "Longbow",
+    "damage": 4,
+    "lethality": 2,
+    "attributes": [
+      "ranged"
+    ]
+  },
+  "fisticuffs": {
+    "name": "Fisticuffs",
+    "damage": 4,
+    "lethality": 1,
+    "attributes": [
+      "melee"
+    ]
+  },
+  "claws": {
+    "name": "Claws",
+    "damage": 3,
+    "lethality": 10,
+    "attributes": [
+      "melee"
+    ]
+  }  
+}
