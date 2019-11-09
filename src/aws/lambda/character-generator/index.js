@@ -7,7 +7,7 @@ const generateCharacter = () => {
       toughness: Math.floor(Math.random() * SCORE_SCALE / 5) + 1,
       speed: Math.floor(Math.random() * SCORE_SCALE / 5) + 1,
     },
-    items_skills_and_effects: {
+    bonuses: {
 
     },
     motivations: {
