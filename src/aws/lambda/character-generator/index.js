@@ -68,7 +68,7 @@ const bonuspool = [
     attributes: ["item", "weapon", "hand", "melee"],
     stats: {
       damage: 20,
-      pursue: 20
+      melee_defend: 10
     }
   }
 ];
