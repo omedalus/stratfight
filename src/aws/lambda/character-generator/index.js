@@ -64,7 +64,7 @@ const bonuspool = [
     }
   }, {
     name: "Sword",
-    description: "You have a sword, which gives you large bonuses to Damage. It also gives you a Defense bonus if the opponent is also armed with a melee weapon.",
+    description: "You have a sword, which gives a large Damage bonus. It also gives you a Defense bonus if the opponent is also armed with a melee weapon.",
     attributes: ["item", "weapon", "hand", "melee"],
     stats: {
       damage: 20,
