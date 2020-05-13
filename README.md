@@ -14,23 +14,46 @@ Put bluntly, just because *I* have bad reflexes or *I* can't aim worth a damn, d
 
 Ideally, the fighting system should be playable as a card game. This will permit friendly social beta-testing. More importantly, if the rules are straightforward enough for a card game, then they'll be easily comprehensible to players of a video game.
 
-This system is primarily designed for combat between two characters. It'll need to be further adapted for n-ary combay.
-
 ### d2 System
 
 Almost all "rolls" will be done by flipping some number of d2s (pennies). This will give each "roll" a nice binomial distribution -- centered enough to be fairly predictable, variant enough to still never be quite certain of what will happen. The value of the roll is the number of Heads that come up in a flip.
 
-#### Contested Rolls
-
-Most rolls are contested, meaning that two characters are competing for some mutually exclusive outcome (this outcome is typically, "I want to hurt that guy," versus, "I want that guy to not hurt me.") Both players flip their respective numbers of d2s, and whoever has the most Heads wins. In the event of a tie, the winner is automatically the underdog -- i.e. whichever character was flipping fewer d2s for that roll. If both characters were flipping the same number of d2s and tied, then a simple coin fip resolves the winner.
-
 #### Notation
 
-We'll use the notation ```D2ROLL(Value)``` to indicate to flip a number of coins indicated by the attribute or variable indicated by Value. The result of the roll is the number of Heads.
+We'll use the notation ```Result = D2ROLL(Value)``` to indicate to flip a number of coins indicated by the attribute or variable indicated by *Value*. The *Result* of the roll is the number of Heads.
+
+#### Contested Rolls and Flip-Offs
+
+Most rolls are contested, meaning that two characters are competing for some mutually exclusive outcome (this outcome is typically, "I want to hurt that guy," versus, "I want that guy to not hurt me.") Both players flip their respective numbers of d2s, and whoever has the most Heads wins.
+
+In the event of a tie, the players who tied hold a **Flip-Off**.
+1. Start with the players who tied the contested roll.
+1. Each remaining player flips a d2.
+1. If everyone flipped Tails, repeat from Step 2.
+1. Everyone who flipped Tails is eliminated from the Flip-Off.
+1. If only one player is left, that player is the winner of the Flip-Off.
+1. Repeat from Step 2.
+
+### Damage Types
+
+This combat system does not use hitpoints. Instead, it uses specific status effects, which affect subsequent combat rolls.
+
+* **Pain**: A numerical level set by a Pain highwater (explained below). Pain inflicts a variable Pain Penalty on an attacker's Attack Ability, which causes an attacker to be unable to execute an attack quite as effectively. A value of ```Pain Penalty = ROLL(Attacker's current Pain level)``` is subtracted from the attacker's Attack Ability. (**Example**: An attacker has an Attack Ability of 10, and is about to issue an attack which would normally flip 10d2 to determine effectiveness. However, the attacker has a Pain level of 4. Just before the attack roll, but after the player has already selected to perform the attack, the attacker flips 4d2 to determine their Pain Penalty. They roll a Pain Penalty of 3, which they subtract from their Attack Ability. Thus, for that particular attack roll, their effective Ability is not 10 but rather 7. They don't flip 10d2, but rather 7d2.) Each character starts each combat with a Pain level of 0. If the Pain Penalty is greater than or equal to the Attack Ability (thus reducing the effective Attack Ability to 0 or below), then the attack automatically fails.
+* **Crippling**: A numerical level set by a Crippling highwater. Crippling inflicts a fixed Crippled Penalty on both attack and defense rolls. Unlike Pain, the Crippled Penalty is not rolled; it is subtracted directly from the Ability score. (**Example**: An attacker has an Attack Ability of 10, but they've sustained 4 points of Crippling. If they attempt to attack, they will do so at an effective Attack Ability of 6.)
+
+
+#### Highwater Levels
+ That is, each character starts with a Pain level of 0. If a character sustains an attack that inflicts a Pain of 2, then that character's Pain level is 2 for the rest of the fight, until they get another attack that inflicts a Pain higher than 2. Thus, 
+ 
+ 
 
 ### Character Skills and Attributes
 
 Each character knows how to perform certain offensive and defensive moves with certain weapons. ("Unarmed" is a weapon.) The character's martial training and skills with that weapon can reveal more moves. At any given moment in combat, the character can't necessarily perform all moves they know; their skill determines, in part, how many openings they see at any given time.
+
+#### Attributes
+
+* **Agility**: 
 
 ### Turns and Initiative
 
