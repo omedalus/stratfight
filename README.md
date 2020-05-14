@@ -54,10 +54,17 @@ An attacker has an Attack Ability of 10, and is about to issue an attack which w
 ##### Roleplaying
 Pain is meaningful in combat insofar as it causes distraction and lack of control. Pain causes the character's body to refuse to obey the commands of the mind. If the player commands the character to execute an action during combat, then it's understood that the character is gritting their teeth and forcing themselves to fight through the pain; but this exertion of willpower takes its toll in the form of poor execution and inadequate concentration on technique.
 
+#### Incapacitation
+A numerical level set by an Incapacitation highwater. Incapacitation inflicts a fixed Incapacition Penalty on both attack and defense rolls. Unlike Pain, the Incapacitation Penalty is not rolled; it is subtracted directly from the Ability score.
+
+
 #### Crippling
 A numerical level set by a Crippling highwater. Crippling inflicts a fixed Crippled Penalty on both attack and defense rolls. Unlike Pain, the Crippled Penalty is not rolled; it is subtracted directly from the Ability score.
 
-Unlike Pain, the effects of Crippling don't automatically resolve shortly after combat. In a fight sequence, the character will carry their Crippling damage with them into the next combat. A character that takes Crippling damage may need hours, days, weeks, or months to heal -- and even then, only with bed rest. Sometimes recovery is impossible without medical or magical attention. Sometimes, Crippling damage could be permanent even *with* such measures. 
+Unlike Pain or Incapacitation, the effects of Crippling don't automatically resolve shortly after combat. In a fight sequence, the character will carry their Crippling damage with them into the next combat. A character that takes Crippling damage may need hours, days, weeks, or months to heal -- and even then, only with bed rest. Sometimes recovery is impossible without medical or magical attention. Sometimes, Crippling damage could be permanent even *with* such measures. 
+
+If a character sustains Crippling damage beyond both their Attack and Defense abilities, they die.
+
 
 ##### Example
 An attacker has an Attack Ability of 10, but they've sustained 4 points of Crippling. If they attempt to attack, they will do so at an effective Attack Ability of 6.
